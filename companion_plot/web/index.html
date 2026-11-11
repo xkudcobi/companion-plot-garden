@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Companion Plot</title>
+  <link rel="stylesheet" href="/app.css">
+</head>
+<body>
+  <header>
+    <div>
+      <h1 data-i18n="ui.title"></h1>
+      <p class="tagline" data-i18n="ui.tagline"></p>
+    </div>
+    <div class="lang" role="group" aria-label="Language">
+      <button id="lang-tr" data-lang="tr">TR</button><button id="lang-en" data-lang="en">EN</button>
+    </div>
+  </header>
+
+  <ol class="steps">
+    <li data-i18n="ui.step1"></li>
+    <li data-i18n="ui.step2"></li>
+    <li data-i18n="ui.step3"></li>
+  </ol>
+
+  <main>
+    <section class="bed-panel">
+      <div id="bed" class="bed" role="grid"></div>
+      <div class="legend">
+        <span class="chip happy" data-i18n="ui.legend_happy"></span>
+        <span class="chip sad" data-i18n="ui.legend_sad"></span>
+        <span class="chip cold" data-i18n="ui.legend_cold"></span>
+      </div>
+      <div id="palette" class="palette"></div>
+      <div class="actions">
+        <button id="btn-help" class="primary" data-i18n="ui.help_me"></button>
+        <button id="btn-sample" data-i18n="ui.sample"></button>
+        <button id="btn-clear" data-i18n="ui.clear"></button>
+      </div>
+      <p id="suggestion" class="suggestion" aria-live="polite"></p>
+    </section>
+
+    <aside>
+      <div class="card score-card">
+        <div class="score-head">
+          <span data-i18n="ui.score"></span>
+          <span id="planted"></span>
+        </div>
+        <div class="meter"><div id="meter-fill"></div></div>
+        <div class="score-num"><span id="percent">0</span><small>/100</small></div>
+        <p id="verdict" class="verdict"></p>
+        <label class="month-row"><span data-i18n="ui.month"></span>
+          <select id="month"></select>
+        </label>
+      </div>
+      <div class="card" id="crop-info"></div>
+      <div class="card">
+        <h2 data-i18n="ui.pairs_good"></h2>
+        <ul id="pairs-good" class="pairs"></ul>
+        <h2 data-i18n="ui.pairs_bad"></h2>
+        <ul id="pairs-bad" class="pairs"></ul>
+      </div>
+    </aside>
+  </main>
+
+  <section class="card calendar-card">
+    <h2 data-i18n="ui.calendar"></h2>
+    <p class="note" data-i18n="ui.calendar_note"></p>
+    <div id="calendar" class="calendar"></div>
+  </section>
+
+  <footer data-i18n="ui.footer"></footer>
+  <script src="/app.js"></script>
+</body>
+</html>
