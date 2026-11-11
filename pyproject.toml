@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "companion-plot"
+version = "0.1.0"
+description = "A garden-bed puzzle: arrange plants and see which neighbours get along."
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+
+[project.scripts]
+companion-plot = "companion_plot.__main__:main"
+
+[tool.setuptools]
+packages = ["companion_plot"]
+
+[tool.setuptools.package-data]
+companion_plot = ["web/*"]
